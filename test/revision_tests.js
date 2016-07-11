@@ -1,7 +1,7 @@
 const expect = require('chai').expect;
 const supertest = require('supertest');
 const app = require('../app');
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 const api = supertest('http://localhost:' + port);
 
 describe('GET /', () => {
