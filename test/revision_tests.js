@@ -1,7 +1,8 @@
 const expect = require('chai').expect;
 const supertest = require('supertest');
 const app = require('../app');
-const api = supertest('http://localhost:4000');
+const port = process.env.PORT || 4000;
+const api = supertest('http://localhost:' + port);
 
 describe('GET /', () => {
   it('should return a 200 response', (done) => {
